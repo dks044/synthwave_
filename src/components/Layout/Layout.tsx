@@ -3,13 +3,11 @@ import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
 import { HeaderContainer } from '../../containers/Layout/HeaderContainer';
 import { BottomContainer } from '../../containers/Layout/BottomContainer';
 
-export const Layout = React.memo(function Layout() {
+export const Layout = React.memo(function Layout({ children }) {
   return (
     <SafeAreaView style={styles.layoutWrapper}>
       <HeaderContainer />
-      <View>
-        <Text>이곳은 컨텐츠가 들어갈 공간</Text>
-      </View>
+      <View style={styles.contentContainer}>{children}</View>
       <BottomContainer />
     </SafeAreaView>
   );
@@ -18,5 +16,10 @@ export const Layout = React.memo(function Layout() {
 const styles = StyleSheet.create({
   layoutWrapper: {
     flex: 1,
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: 'center', // 수직 중앙 정렬
+    alignItems: 'center', // 수평 중앙 정렬
   },
 });
