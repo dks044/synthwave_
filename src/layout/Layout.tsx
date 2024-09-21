@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
 import { HeaderContainer } from './header/HeaderContainer';
 import { BottomContainer } from './bottom/BottomContainer';
 
-export const Layout = React.memo(function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export const Layout = React.memo(function Layout({ children }: LayoutProps) {
   return (
     <SafeAreaView style={styles.layoutWrapper}>
       <HeaderContainer />
