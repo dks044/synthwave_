@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Layout } from '../components/Layout/Layout';
+import { Layout } from '../layout/Layout';
 
 export function HomeScreen(): React.JSX.Element {
   return (

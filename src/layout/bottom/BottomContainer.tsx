@@ -1,6 +1,6 @@
 import React from 'react';
-import { Bottom } from '../../components/Layout/Bottom';
+import { BottomPresenter } from './BottomPresenter';
 
 export const BottomContainer = React.memo(function BottomContainer() {
-  return <Bottom />;
+  return <BottomPresenter />;
 });

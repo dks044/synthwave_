@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
-import { HeaderContainer } from '../../containers/Layout/HeaderContainer';
-import { BottomContainer } from '../../containers/Layout/BottomContainer';
+import { HeaderContainer } from './header/HeaderContainer';
+import { BottomContainer } from './bottom/BottomContainer';
 
 export const Layout = React.memo(function Layout({ children }) {
   return (

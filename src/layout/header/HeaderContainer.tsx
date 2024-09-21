@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from '../../components/Layout/Header';
+import { HeaderPresenter } from './HeaderPresenter';
 
 export const HeaderContainer = React.memo(function HeaderContainer() {
-  return <Header />;
+  return <HeaderPresenter />;
 });
