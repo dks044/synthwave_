@@ -6,6 +6,7 @@ interface IconProps {
   color: string;
   size: number;
 }
+//Mui임.
 export const IconContainer = React.memo(function IconContainer(props: IconProps) {
   const { name, color, size } = props;
   return <IconPresenter {...props} />;
