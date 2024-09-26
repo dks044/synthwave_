@@ -32,15 +32,25 @@ export const BottomPresenter = React.memo(function BottomPresenter() {
     <BottomWrapper>
       <TabWrapper>
         <Tab>
-          <IconContainer name='home-filled' color={theme.color} size={25} />
+          <IconContainer
+            name='home-filled'
+            color={theme.color}
+            size={30}
+            isCommunityIcons={false}
+          />
           <Text style={{ color: theme.color, fontSize: 10 }}>홈</Text>
         </Tab>
         <Tab>
-          <IconContainer name='explore' color={theme.color} size={30} />
+          <IconContainer name='explore' color={theme.color} size={30} isCommunityIcons={false} />
           <Text style={{ color: theme.color, fontSize: 10 }}>둘러보기</Text>
         </Tab>
         <Tab>
-          <IconContainer name='library-music' color={theme.color} size={30} />
+          <IconContainer
+            name='library-music'
+            color={theme.color}
+            size={30}
+            isCommunityIcons={false}
+          />
           <Text style={{ color: theme.color, fontSize: 10 }}>보관함</Text>
         </Tab>
       </TabWrapper>

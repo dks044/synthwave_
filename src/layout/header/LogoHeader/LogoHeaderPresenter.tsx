@@ -62,14 +62,20 @@ export const LogoHeaderPresenter = React.memo(function LogoHeaderPresenter({
       </View>
       <StyledHeaderIconWrapper>
         {/* TODO: 알림올거 있으면 아이콘 변경하는거 있어야함. */}
-        <IconContainer name='bell-outline' size={30} color='white' isCommunityIcons={true} />
-        <IconContainer name='magnify' size={30} color='white' isCommunityIcons={true} />
-        <IconContainer
-          name='account-circle-outline'
-          size={30}
-          color='white'
-          isCommunityIcons={true}
-        />
+        <TouchableOpacity>
+          <IconContainer name='bell-outline' size={30} color='white' isCommunityIcons={true} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <IconContainer name='magnify' size={30} color='white' isCommunityIcons={true} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <IconContainer
+            name='account-circle-outline'
+            size={30}
+            color='white'
+            isCommunityIcons={true}
+          />
+        </TouchableOpacity>
       </StyledHeaderIconWrapper>
     </StyledLogoHeader>
   );
