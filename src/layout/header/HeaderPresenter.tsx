@@ -1,12 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Appearance, View } from 'react-native';
 import styled from 'styled-components/native';
 import { LogoHeaderContainer } from './LogoHeader/LogoHeaderContainer';
+import { DarkSignatureBackgroundColor, LightSignatureBackgroundColor } from '../../utils/theme';
 
 const StyledHeaderWrapper = styled(View)`
-  background-color: #222;
+  background-color: ${Appearance.getColorScheme() === 'dark'
+    ? `${DarkSignatureBackgroundColor}`
+    : `${LightSignatureBackgroundColor}`};
   width: 100%;
-  height: 300px;
+  height: 150px;
 `;
 
 export const HeaderPresenter = React.memo(function HeaderPresenter() {

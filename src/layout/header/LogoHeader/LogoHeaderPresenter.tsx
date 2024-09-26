@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import styled from 'styled-components/native';
 import { StausBarHeight } from '../../../utils/constant';
 import LogoImage from '../../../assets/image/logo/logo.png';
@@ -10,53 +10,67 @@ import Animated, {
   Easing,
   withRepeat,
 } from 'react-native-reanimated';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTheme } from 'styled-components/native';
+import { IconContainer } from '../../../components/commom/icon/IconContainer';
 
-const StyledLogoHeaderWrapper = styled(View)`
+const StyledLogoHeader = styled(SafeAreaView)`
   display: flex;
   flex-direction: row;
-  margin-top: ${StausBarHeight}px;
-  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 const StyledLogoImageBox = styled(View)`
   width: 50px;
   height: 50px;
 `;
+const StyledLogoHeaderText = styled(Text)`
+  color: ${({ theme }) => theme.color};
+  font-size: 22px;
+`;
 
-export const LogoHeaderPresenter = React.memo(function LogoHeaderPresenter() {
-  const animationValue = useSharedValue(0);
+const StyledHeaderIconWrapper = styled(View)`
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+`;
 
-  // 애니메이션 스타일 정의
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {
-          rotate: `${animationValue.value}deg`,
-        },
-      ],
-    };
-  });
-
-  // 애니메이션 시작 (예: 컴포넌트가 마운트될 때)
-  React.useEffect(() => {
-    animationValue.value = withRepeat(
-      withTiming(360, { duration: 3000, easing: Easing.linear }),
-      -1, // 무한 반복
-      false, // 방향을 바꾸지 않음
-    );
-  }, []);
-
+interface LogoHeaderPresenter {
+  animatedStyle: any;
+}
+export const LogoHeaderPresenter = React.memo(function LogoHeaderPresenter({
+  animatedStyle,
+}: LogoHeaderPresenter) {
   return (
-    <StyledLogoHeaderWrapper>
-      <StyledLogoImageBox>
-        <Animated.View style={animatedStyle}>
-          <Animated.Image
-            source={LogoImage}
-            style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
-          />
-        </Animated.View>
-      </StyledLogoImageBox>
-      {/* <Text>SYNTHWAVE</Text> */}
-    </StyledLogoHeaderWrapper>
+    <StyledLogoHeader>
+      <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <TouchableOpacity>
+          <StyledLogoImageBox>
+            <Animated.View style={animatedStyle}>
+              <Animated.Image
+                source={LogoImage}
+                style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
+              />
+            </Animated.View>
+          </StyledLogoImageBox>
+        </TouchableOpacity>
+        <StyledLogoHeaderText>SYNTHWAVE</StyledLogoHeaderText>
+      </View>
+      <StyledHeaderIconWrapper>
+        {/* TODO: 알림올거 있으면 아이콘 변경하는거 있어야함. */}
+        <IconContainer name='bell-outline' size={30} color='white' isCommunityIcons={true} />
+        <IconContainer name='magnify' size={30} color='white' isCommunityIcons={true} />
+        <IconContainer
+          name='account-circle-outline'
+          size={30}
+          color='white'
+          isCommunityIcons={true}
+        />
+      </StyledHeaderIconWrapper>
+    </StyledLogoHeader>
   );
 });

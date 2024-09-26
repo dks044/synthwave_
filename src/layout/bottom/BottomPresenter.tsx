@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text, Appearance } from 'react-native';
 import styled from 'styled-components/native';
 import { BOTTOM_HEIGHT } from '../../utils/constant'; // BOTTOM_HEIGHT는 픽셀 단위로 설정
 import { IconContainer } from '../../components/commom/icon/IconContainer';
@@ -25,8 +25,9 @@ const Tab = styled(TouchableOpacity)`
 `;
 
 export const BottomPresenter = React.memo(function BottomPresenter() {
-  const theme = useTheme(); // 현재 테마 가져오기
+  const theme = useTheme();
 
+  console.log(theme);
   return (
     <BottomWrapper>
       <TabWrapper>
