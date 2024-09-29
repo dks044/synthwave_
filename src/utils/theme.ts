@@ -1,19 +1,24 @@
 import { Appearance } from 'react-native';
 
 //theme
+//원테마로 결졍.
 export const light = {
-  name: 'light',
-  color: 'black',
-  backgroundColor: '#ffffff',
+  // name: 'light',
+  // color: 'black',
+  // backgroundColor: '#DADFE4',
+  // componentBackgroundColor: '#ffffff',
+  name: 'dark',
+  color: 'white',
+  backgroundColor: '#222',
+  componentBackgroundColor: '#1c1b1b',
 };
 
 export const dark = {
   name: 'dark',
   color: 'white',
   backgroundColor: '#222',
+  componentBackgroundColor: '#1c1b1b',
 };
-
-//TODO:(라이트테마는 디자인 기획이 어려워서 두 테마를 색깔 통일하게함.)
 
 export const DarkSignatureBackgroundColor: string = '#1c1b1b';
 // export const LightSignatureBackgroundColor: string = '#DADFE4';
