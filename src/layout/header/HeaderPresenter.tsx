@@ -3,6 +3,7 @@ import { Appearance, View } from 'react-native';
 import styled from 'styled-components/native';
 import { LogoHeaderContainer } from './LogoHeader/LogoHeaderContainer';
 import { DarkSignatureBackgroundColor, LightSignatureBackgroundColor } from '../../utils/theme';
+import { HeaderCategoryContainer } from './HeaderCategory/HeaderCategory.Container';
 
 const StyledHeaderWrapper = styled(View)`
   background-color: ${Appearance.getColorScheme() === 'dark'
@@ -16,6 +17,7 @@ export const HeaderPresenter = React.memo(function HeaderPresenter() {
   return (
     <StyledHeaderWrapper>
       <LogoHeaderContainer />
+      <HeaderCategoryContainer />
     </StyledHeaderWrapper>
   );
 });

@@ -18,7 +18,7 @@ export function HomeScreen(): React.JSX.Element {
           }`,
         }}
       >
-        <Text style={{ color: `white` }}>반가워요~ 홈화면이에요!</Text>
+        <Text style={{ color: `white` }}></Text>
       </View>
     </Layout>
   );

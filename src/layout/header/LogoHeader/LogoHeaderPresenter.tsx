@@ -18,27 +18,15 @@ const StyledLogoHeader = styled(SafeAreaView)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
 `;
 
 const StyledLogoImageBox = styled(View)`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 `;
-const StyledLogoHeaderText = styled(Text)`
-  font-size: 30px;
-  color: 'fffff20';
-`;
-
-const StyledHeaderIconWrapper = styled(View)`
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  align-items: center;
-`;
-
 interface LogoHeaderPresenter {
   animatedStyle: any;
 }
@@ -58,25 +46,7 @@ export const LogoHeaderPresenter = React.memo(function LogoHeaderPresenter({
             </Animated.View>
           </StyledLogoImageBox>
         </TouchableOpacity>
-        <StyledLogoHeaderText>SYNTHWAVE</StyledLogoHeaderText>
       </View>
-      <StyledHeaderIconWrapper>
-        {/* TODO: 알림올거 있으면 아이콘 변경하는거 있어야함. */}
-        <TouchableOpacity>
-          <IconContainer name='bell-outline' size={30} color='white' isCommunityIcons={true} />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <IconContainer name='magnify' size={30} color='white' isCommunityIcons={true} />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <IconContainer
-            name='account-circle-outline'
-            size={30}
-            color='white'
-            isCommunityIcons={true}
-          />
-        </TouchableOpacity>
-      </StyledHeaderIconWrapper>
     </StyledLogoHeader>
   );
 });

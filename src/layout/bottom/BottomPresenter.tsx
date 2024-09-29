@@ -4,6 +4,8 @@ import styled from 'styled-components/native';
 import { BOTTOM_HEIGHT } from '../../utils/constant'; // BOTTOM_HEIGHT는 픽셀 단위로 설정
 import { IconContainer } from '../../components/commom/icon/IconContainer';
 import { useTheme } from 'styled-components/native';
+import { LinearGradientWrapper } from '../../utils/LinearGradientWrapper';
+import LinearGradient from 'react-native-linear-gradient';
 
 const BottomWrapper = styled(View)`
   height: ${BOTTOM_HEIGHT}px;
@@ -51,7 +53,7 @@ export const BottomPresenter = React.memo(function BottomPresenter() {
             size={30}
             isCommunityIcons={false}
           />
-          <Text style={{ color: theme.color, fontSize: 10 }}>보관함</Text>
+          <Text style={{ fontSize: 10, color: 'white' }}>보관함</Text>
         </Tab>
       </TabWrapper>
     </BottomWrapper>

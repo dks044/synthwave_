@@ -10,8 +10,8 @@ export const LinearGradientWrapper = React.memo(function LinearGradientWrapper({
   return (
     <LinearGradient
       colors={['#FF0000', '#FF0082', '#FF6400']}
-      style={{ padding: 10, borderRadius: 5 }}
       start={{ x: 0, y: 0 }}
+      style={{ padding: 5, borderRadius: 5, position: 'absolute' }}
       end={{ x: 0, y: 1 }}
     >
       {children}
