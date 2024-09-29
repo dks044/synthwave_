@@ -25,7 +25,9 @@ function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={appTheme}>
       <StatusBar
-        barStyle={appTheme === light ? 'dark-content' : 'light-content'}
+        //TODO: 원테마로 변경
+        // barStyle={appTheme === light ? 'dark-content' : 'light-content'}
+        barStyle={'light-content'}
         backgroundColor='transparent'
         translucent={true}
       />

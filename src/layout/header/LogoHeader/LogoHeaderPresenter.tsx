@@ -28,8 +28,8 @@ const StyledLogoImageBox = styled(View)`
   height: 50px;
 `;
 const StyledLogoHeaderText = styled(Text)`
-  color: ${({ theme }) => theme.color};
-  font-size: 22px;
+  font-size: 30px;
+  color: 'fffff20';
 `;
 
 const StyledHeaderIconWrapper = styled(View)`
