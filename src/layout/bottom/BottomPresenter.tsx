@@ -10,8 +10,6 @@ import LinearGradient from 'react-native-linear-gradient';
 const BottomWrapper = styled(View)`
   height: ${BOTTOM_HEIGHT}px;
   background-color: ${({ theme }) => theme.backgroundColor};
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
 `;
 
 const TabWrapper = styled(View)`

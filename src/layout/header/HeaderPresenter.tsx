@@ -10,14 +10,13 @@ const StyledHeaderWrapper = styled(View)`
     ? `${DarkSignatureBackgroundColor}`
     : `${LightSignatureBackgroundColor}`};
   width: 100%;
-  height: 150px;
+  height: 170px;
 `;
 
 export const HeaderPresenter = React.memo(function HeaderPresenter() {
   return (
     <StyledHeaderWrapper>
       <LogoHeaderContainer />
-      <HeaderCategoryContainer />
     </StyledHeaderWrapper>
   );
 });

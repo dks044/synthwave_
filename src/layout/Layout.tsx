@@ -4,6 +4,7 @@ import { HeaderContainer } from './header/HeaderContainer';
 import { BottomContainer } from './bottom/BottomContainer';
 import { useTheme } from 'styled-components';
 import { DarkSignatureBackgroundColor, LightSignatureBackgroundColor } from '../utils/theme';
+import { LinearGradientWrapper } from '../utils/LinearGradientWrapper';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,6 +16,7 @@ export const Layout = React.memo(function Layout({ children }: LayoutProps) {
     <View style={styles.layoutWrapper}>
       <HeaderContainer />
       <View style={styles.contentContainer}>{children}</View>
+
       <BottomContainer />
     </View>
   );

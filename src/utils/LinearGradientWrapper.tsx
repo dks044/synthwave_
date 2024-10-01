@@ -11,7 +11,7 @@ export const LinearGradientWrapper = React.memo(function LinearGradientWrapper({
     <LinearGradient
       colors={['#FF0000', '#FF0082', '#FF6400']}
       start={{ x: 0, y: 0 }}
-      style={{ padding: 5, borderRadius: 5, position: 'absolute' }}
+      style={{ padding: 5, width: 20 }}
       end={{ x: 0, y: 1 }}
     >
       {children}
