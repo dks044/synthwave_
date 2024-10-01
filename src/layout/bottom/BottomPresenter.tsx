@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import { View, TouchableOpacity, Text, Appearance } from 'react-native';
+import { View, TouchableOpacity, Text, Appearance, Image } from 'react-native';
 import styled from 'styled-components/native';
 import { BOTTOM_HEIGHT } from '../../utils/constant'; // BOTTOM_HEIGHT는 픽셀 단위로 설정
 import { IconContainer } from '../../components/commom/icon/IconContainer';
 import { useTheme } from 'styled-components/native';
-import { LinearGradientWrapper } from '../../utils/LinearGradientWrapper';
-import LinearGradient from 'react-native-linear-gradient';
+import Home from '../../assets/image/bottom/home.png';
+import Explorer from '../../assets/image/bottom/explorer.png';
+import Library from '../../assets/image/bottom/library.png';
 
 const BottomWrapper = styled(View)`
   height: ${BOTTOM_HEIGHT}px;
@@ -32,26 +33,19 @@ export const BottomPresenter = React.memo(function BottomPresenter() {
     <BottomWrapper>
       <TabWrapper>
         <Tab>
-          <IconContainer
-            name='home-filled'
-            color={theme.color}
-            size={30}
-            isCommunityIcons={false}
-          />
-          <Text style={{ color: theme.color, fontSize: 10 }}>홈</Text>
+          <Image source={Home} style={{ width: '100%', height: '100%', resizeMode: 'contain' }} />
         </Tab>
         <Tab>
-          <IconContainer name='explore' color={theme.color} size={30} isCommunityIcons={false} />
-          <Text style={{ color: theme.color, fontSize: 10 }}>둘러보기</Text>
+          <Image
+            source={Explorer}
+            style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
+          />
         </Tab>
         <Tab>
-          <IconContainer
-            name='library-music'
-            color={theme.color}
-            size={30}
-            isCommunityIcons={false}
+          <Image
+            source={Library}
+            style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
           />
-          <Text style={{ fontSize: 10, color: 'white' }}>보관함</Text>
         </Tab>
       </TabWrapper>
     </BottomWrapper>
