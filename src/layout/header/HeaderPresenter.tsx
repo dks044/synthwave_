@@ -4,8 +4,9 @@ import styled from 'styled-components/native';
 import { LogoHeaderContainer } from './LogoHeader/LogoHeaderContainer';
 import { DarkSignatureBackgroundColor, LightSignatureBackgroundColor } from '../../utils/theme';
 import { HeaderCategoryContainer } from './HeaderCategory/HeaderCategory.Container';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const StyledHeaderWrapper = styled(View)`
+const StyledHeaderWrapper = styled(GestureHandlerRootView)`
   background-color: ${Appearance.getColorScheme() === 'dark'
     ? `${DarkSignatureBackgroundColor}`
     : `${LightSignatureBackgroundColor}`};

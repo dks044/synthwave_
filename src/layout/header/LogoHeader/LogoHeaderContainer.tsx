@@ -16,7 +16,8 @@ export const LogoHeaderContainer = React.memo(function LogoHeaderContainer() {
   const vibrationAnimationValueX = useSharedValue(0);
   const vibrationAnimationValueY = useSharedValue(0);
   const [open, setOpen] = useState<boolean>(false);
-  const theme = useTheme();
+  const pressed = useSharedValue<boolean>(false);
+  const offset = useSharedValue<number>(0);
 
   // 애니메이션 스타일 정의
   const rotateAnimationStyle = useAnimatedStyle(() => {

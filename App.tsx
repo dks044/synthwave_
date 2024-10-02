@@ -5,6 +5,7 @@ import { HomeScreen } from './src/screens/HomeScreens';
 import { ThemeProvider } from 'styled-components';
 import { light, dark } from './src/utils/theme';
 import { StatusBar, Appearance, StyleSheet, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 function App(): React.JSX.Element {
   const Stack = createStackNavigator();
