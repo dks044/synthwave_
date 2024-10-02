@@ -14,7 +14,9 @@ const BottomWrapper = styled(View)`
 `;
 
 const TabWrapper = styled(View)`
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
 `;
 
 const Tab = styled(TouchableOpacity)`
@@ -22,7 +24,8 @@ const Tab = styled(TouchableOpacity)`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  width: 50px;
+  height: 50px;
 `;
 
 export const BottomPresenter = React.memo(function BottomPresenter() {

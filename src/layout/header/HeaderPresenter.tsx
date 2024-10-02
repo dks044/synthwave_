@@ -10,7 +10,7 @@ const StyledHeaderWrapper = styled(View)`
     ? `${DarkSignatureBackgroundColor}`
     : `${LightSignatureBackgroundColor}`};
   width: 100%;
-  height: 170px;
+  height: 500px;
 `;
 
 export const HeaderPresenter = React.memo(function HeaderPresenter() {

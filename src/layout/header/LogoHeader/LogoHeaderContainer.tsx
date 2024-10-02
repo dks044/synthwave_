@@ -73,7 +73,7 @@ export const LogoHeaderContainer = React.memo(function LogoHeaderContainer() {
 
   const dialMenuColorStyle = useAnimatedStyle(() => {
     return {
-      backgroundColor: open ? '#2a2d31' : 'rgba(255, 46, 0, 0.5)',
+      backgroundColor: open ? '#2a2d31' : 'rgba(255, 46, 0, 0.4)',
     };
   });
 
@@ -83,6 +83,7 @@ export const LogoHeaderContainer = React.memo(function LogoHeaderContainer() {
       onTouchToOpenDialMenu={onTouchToOpenDialMenu}
       dialMenuAnimationStyle={dialMenuAnimationStyle}
       dialMenuColorStyle={dialMenuColorStyle}
+      open={open}
     />
   );
 });
